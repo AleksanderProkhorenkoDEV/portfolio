@@ -1,36 +1,26 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Aleksander Portfolio</title>
-  </head>
-  <body>
-    <div>
-      <h1>Aleksander Trujillo</h1> /**`Hacer efecto ola, full size en verde` */
-      <p>Web developer</p>
-    </div>
+<BaseLayout>
+  <div>
+    <h1>Aleksander Trujillo</h1> /**`Hacer efecto ola, full size en verde` */
+    <p>Web developer</p>
+  </div>
 
-    <div>
-      <h4>About Me</h4>
-      <hr />
-      <p>
-        I am looking for job as web developer o multiplatform. Recently I finish
-        the degree of multiplaform developer.
-        <br />
-        My main focus is web development and I have worked on several full-stack projects,
-        the last I made is a bank app with web component and java spring boot.
-        <br />
-        I enjoy learning new technologies and experiment with as.
-        <br />
-        Outside the programing I like cook, 3D Design and motorcycles.
-      </p>
-    </div>
-  </body>
-</html>
+  <div>
+    <h4>About Me</h4>
+    <hr />
+    <p>
+      I am looking for job as web developer o multiplatform. Recently I finish
+      the degree of multiplaform developer.
+      <br />
+      My main focus is web development and I have worked on several full-stack projects,
+      the last I made is a bank app with web component and java spring boot.
+      <br />
+      I enjoy learning new technologies and experiment with as.
+      <br />
+      Outside the programing I like cook, 3D Design and motorcycles.
+    </p>
+  </div>
+</BaseLayout>
