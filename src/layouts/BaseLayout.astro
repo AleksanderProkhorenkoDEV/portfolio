@@ -12,9 +12,10 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Aleksander Portfolio</title>
 
-    <Font cssVariable="--font-jetbrain" />
+    <Font cssVariable="--font-jetbrain" preload />
+    <Font cssVariable="--font-montserrat" preload />
   </head>
-  <body>
+  <body class="font-montserrat">
     <article>
       <slot />
     </article>
