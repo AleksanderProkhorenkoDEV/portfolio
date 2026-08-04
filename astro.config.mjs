@@ -17,12 +17,12 @@ export default defineConfig({
         variants: [
           {
             src: ["./src/assets/fonts/JetBrainsMono-Bold.ttf"],
-            weight: "normal",
+            weight: 700,
             style: "normal",
           },
           {
             src: ["./src/assets/fonts/JetBrainsMono-Light.ttf"],
-            weight: 200,
+            weight: 300,
             style: "normal",
           },
           {
@@ -32,6 +32,35 @@ export default defineConfig({
           },
           {
             src: ["./src/assets/fonts/JetBrainsMono-Regular.ttf"],
+            weight: 400,
+            style: "normal",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Montserrat",
+      cssVariable: "--font-montserrat",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/Montserrat-Bold.ttf"],
+            weight: 700,
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/Montserrat-Light.ttf"],
+            weight: 300,
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/Montserrat-Medium.ttf"],
+            weight: 500,
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/Montserrat-Regular.ttf"],
             weight: 400,
             style: "normal",
           },
