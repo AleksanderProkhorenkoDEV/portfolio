@@ -1,6 +1,8 @@
 ---
 import { Font } from "astro:assets";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -14,10 +16,15 @@ import "../styles/global.css";
 
     <Font cssVariable="--font-jetbrain" preload />
     <Font cssVariable="--font-montserrat" preload />
+
+    <ClientRouter />
   </head>
-  <body class="font-montserrat bg-background text-foreground">
-    <article>
+  <body
+    class="font-montserrat bg-background text-foreground flex justify-center"
+  >
+    <Navigation>
       <slot />
-    </article>
+    </Navigation>
   </body>
 </html>
+
