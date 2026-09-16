@@ -20,6 +20,13 @@
       clearInterval(intervalId);
       document.getElementById("name")?.classList.add("after:animate-pulse");
     }
-    null;
   }, 250);
+
+  document.addEventListener(
+    "astro:before-swap",
+    () => {
+      clearInterval(intervalId);
+    },
+    { once: true },
+  );
 </script>
