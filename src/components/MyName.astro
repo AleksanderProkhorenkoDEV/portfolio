@@ -1,0 +1,25 @@
+---
+
+---
+
+<h1 id="name" class="text-7xl after:ml-0.5 after:content-['|'] after:text-main">
+  ALEKSANDER TRUJILLO PROKHORENKO
+</h1>
+
+<script>
+  const fallback = document.getElementById("name")?.textContent;
+  let title = "";
+  let letterCount = 0;
+
+  const intervalId = setInterval(() => {
+    const letter = fallback?.charAt(letterCount);
+    letterCount += 1;
+    title += letter;
+    document.getElementById("name")!.innerHTML = title;
+    if (fallback === title) {
+      clearInterval(intervalId);
+      document.getElementById("name")?.classList.add("after:animate-pulse");
+    }
+    null;
+  }, 250);
+</script>
