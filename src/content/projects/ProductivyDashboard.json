@@ -1,0 +1,12 @@
+{
+    "title": "Productivity Dashboard",
+    "image": "",
+    "tags": [
+        "Lit",
+        "TypeScript",
+        "Web Component",
+        "Vite"
+    ],
+    "liveUrl": "https://productivity-dashboard-six-eta.vercel.app/",
+    "githubUrl": "https://github.com/AleksanderProkhorenkoDEV/lit-productivity-dashboard"
+}

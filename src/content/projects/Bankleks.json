@@ -1,0 +1,15 @@
+{
+    "title": "Bankleks",
+    "image": "",
+    "tags": [
+        "Lit",
+        "Web Components",
+        "Vite",
+        "TypeScript",
+        "Java",
+        "Spring Boot",
+        "MySQL"
+    ],
+    "liveUrl": "https://bankleks.vercel.app/signIn",
+    "githubUrl": "https://github.com/AleksanderProkhorenkoDEV/Bankleks"
+}
