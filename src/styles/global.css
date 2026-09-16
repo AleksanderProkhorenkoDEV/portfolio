@@ -2,5 +2,9 @@
 
 @theme inline {
   --font-jetbrain: var(--font-jetbrain);
-  --font-montserrat: var(--font-montserrat)
+  --font-montserrat: var(--font-montserrat);
+
+  --color-background: #060709;
+  --color-main: #2DC08E;
+  --color-foreground: #E6E8EB;
 }
