@@ -4,11 +4,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <div class="flex items-end h-full">
-    <div class="flex-2 h-full">
+  <div class="flex h-full items-end  max-lg:flex-col max-lg:items-center">
+    <div class="flex-2  h-full max-xl:w-1/2 max-lg:w-full">
       <ThreeScene client:only="react" />
     </div>
-    <div class="max-w-sm h-fit flex-1 ">
+    <div class="max-w-sm h-fit flex-1">
       <h4 class="font-jetbrain mb-2">>_ About Me</h4>
       <hr class="text-main mb-2" />
 
