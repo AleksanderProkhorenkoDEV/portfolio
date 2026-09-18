@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import Tag from "./Tag.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projectsCollection">;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const { title, tags, image, liveUrl, githubUrl } = project.data;
+---
+
+<article class="w-full max-w-md group flex flex-col gap-3">
+  <p
+    class="font-jetbrain text-xl sm:text-2xl group-hover:text-main transition-colors duration-200 ease-in-out"
+  >
+    {String(index).padStart(2, "0")}
+    {title}
+  </p>
+  <hr
+    class="group-hover:text-main transition-colors duration-200 ease-in-out"
+  />
+  <div class="flex gap-2 flex-wrap min-h-18">
+    {tags.map((tag) => <Tag name={tag} />)}
+  </div>
+  <div>
+    <Image
+      src={image}
+      alt={title}
+      width={480}
+      height={240}
+      densities={[1, 2]}
+      quality={75}
+      class="w-full h-auto aspect-2/1 object-cover rounded"
+    />
+  </div>
+  <div class="flex gap-2 justify-end">
+    {
+      liveUrl && (
+        <a
+          class="font-jetbrain group-hover:text-main duration-200 ease-in-out transition-colors"
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Preview
+        </a>
+      )
+    }
+    {
+      githubUrl && (
+        <a
+          class="font-jetbrain group-hover:text-main duration-200 ease-in-out transition-colors"
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      )
+    }
+  </div>
+</article>
