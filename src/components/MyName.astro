@@ -2,12 +2,23 @@
 
 ---
 
-<h1 id="name" class="text-3xl sm:text-5xl lg:text-7xl leading-tight wrap-break-words after:ml-0.5 after:content-['|'] after:text-main">
-  ALEKSANDER TRUJILLO PROKHORENKO
-</h1>
+<div class="relative">
+  <h1
+    aria-hidden="true"
+    class="invisible text-3xl sm:text-5xl lg:text-7xl leading-tight wrap-break-words"
+  >
+    ALEKSANDER TRUJILLO PROKHORENKO
+  </h1>
+
+  <h1
+    id="name"
+    class="absolute inset-0 text-3xl sm:text-5xl lg:text-7xl leading-tight wrap-break-words after:ml-0.5 after:content-['|'] after:text-main"
+  >
+  </h1>
+</div>
 
 <script>
-  const fallback = document.getElementById("name")?.textContent;
+  const fallback = "ALEKSANDER TRUJILLO PROKHORENKO";
   let title = "";
   let letterCount = 0;
 
