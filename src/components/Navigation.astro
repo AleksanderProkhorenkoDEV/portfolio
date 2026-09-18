@@ -9,14 +9,20 @@ const links = [
 ---
 
 <div class="flex flex-col gap-4 min-h-screen w-full">
-  <div class="w-auto mt-10 ml-20">
+  <div class="w-auto mt-10 ml-4 sm:ml-10 lg:ml-20">
     <MyName />
-    <p class="text-3xl text-foreground/60 text-left">Web developer</p>
+    <p class="text-xl sm:text-2xl lg:text-3xl text-foreground/60 text-left">
+      Web developer
+    </p>
   </div>
 
-  <div class="flex gap-4 w-full h-full py-10 px-20">
-    <nav class="w-[15%] shrink-0 flex items-center justify-center">
-      <ul class="text-xl flex flex-col gap-4 capitalize items-center">
+  <div
+    class="flex flex-col lg:flex-row gap-6 lg:gap-4 w-full h-full py-6 px-4 sm:px-10 lg:py-10 lg:px-20"
+  >
+    <nav class="w-full lg:w-[15%] shrink-0 flex items-center justify-center">
+      <ul
+        class="text-lg lg:text-xl flex flex-row flex-wrap lg:flex-col gap-4 capitalize items-center justify-center"
+      >
         {
           links.map((link) => {
             const isActive = pathname === link.href;
@@ -81,7 +87,7 @@ const links = [
       </ul>
     </nav>
 
-    <main class="flex-1">
+    <main class="flex-1 w-full">
       <slot />
     </main>
   </div>
