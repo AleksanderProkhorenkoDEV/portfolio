@@ -19,21 +19,6 @@ export default defineConfig({
       options: {
         variants: [
           {
-            src: ["./src/assets/fonts/JetBrainsMono-Bold.ttf"],
-            weight: 700,
-            style: "normal",
-          },
-          {
-            src: ["./src/assets/fonts/JetBrainsMono-Light.ttf"],
-            weight: 300,
-            style: "normal",
-          },
-          {
-            src: ["./src/assets/fonts/JetBrainsMono-Medium.ttf"],
-            weight: 500,
-            style: "normal",
-          },
-          {
             src: ["./src/assets/fonts/JetBrainsMono-Regular.ttf"],
             weight: 400,
             style: "normal",
@@ -50,16 +35,6 @@ export default defineConfig({
           {
             src: ["./src/assets/fonts/Montserrat-Bold.ttf"],
             weight: 700,
-            style: "normal",
-          },
-          {
-            src: ["./src/assets/fonts/Montserrat-Light.ttf"],
-            weight: 300,
-            style: "normal",
-          },
-          {
-            src: ["./src/assets/fonts/Montserrat-Medium.ttf"],
-            weight: 500,
             style: "normal",
           },
           {
