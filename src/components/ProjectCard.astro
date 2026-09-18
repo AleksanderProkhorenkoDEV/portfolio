@@ -16,7 +16,7 @@ const { title, tags, image, liveUrl, githubUrl } = project.data;
   <p
     class="font-jetbrain text-xl sm:text-2xl group-hover:text-main transition-colors duration-200 ease-in-out"
   >
-    {String(index).padStart(2, "0")}
+    <span class="mr-3">{String(index).padStart(2, "0")}</span>
     {title}
   </p>
   <hr
