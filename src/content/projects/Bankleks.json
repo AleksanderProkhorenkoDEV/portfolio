@@ -1,6 +1,7 @@
 {
+    "order": 1,
     "title": "Bankleks",
-    "image": "",
+    "image": "./bankleks-preview.png",
     "tags": [
         "Lit",
         "Web Components",
