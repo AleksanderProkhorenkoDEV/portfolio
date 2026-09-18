@@ -1,7 +1,7 @@
 ---
 import MyName from "./MyName.astro";
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 const links = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
