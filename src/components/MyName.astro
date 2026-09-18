@@ -5,6 +5,7 @@
 <div class="relative">
   <h1
     aria-hidden="true"
+    id="name-hidden"
     class="invisible text-3xl sm:text-5xl lg:text-7xl leading-tight wrap-break-words"
   >
     ALEKSANDER TRUJILLO PROKHORENKO
@@ -18,26 +19,34 @@
 </div>
 
 <script>
-  const fallback = "ALEKSANDER TRUJILLO PROKHORENKO";
-  let title = "";
-  let letterCount = 0;
+  let intervalId: number | null = null;
 
-  const intervalId = setInterval(() => {
-    const letter = fallback?.charAt(letterCount);
-    letterCount += 1;
-    title += letter;
-    document.getElementById("name")!.innerHTML = title;
-    if (fallback === title) {
-      clearInterval(intervalId);
-      document.getElementById("name")?.classList.add("after:animate-pulse");
-    }
-  }, 250);
+  function initTypewriter() {
+    const hidden = document.getElementById("name-hidden");
+    const target = document.getElementById("name");
+    if (!hidden || !target) return;
 
-  document.addEventListener(
-    "astro:before-swap",
-    () => {
-      clearInterval(intervalId);
-    },
-    { once: true },
-  );
+    if (intervalId) clearInterval(intervalId); // limpiar navegación anterior
+
+    const fallback = hidden.textContent;
+    let title = "";
+    let letterCount = 0;
+
+    target.innerHTML = ""; 
+    target.classList.remove("after:animate-pulse");
+
+    intervalId = setInterval(() => {
+      const letter = fallback?.charAt(letterCount);
+      letterCount += 1;
+      title += letter;
+      target.innerHTML = title;
+      if (fallback === title && intervalId != null) {
+        clearInterval(intervalId);
+        intervalId = null;
+        target.classList.add("after:animate-pulse");
+      }
+    }, 250);
+  }
+
+  document.addEventListener("astro:page-load", initTypewriter);
 </script>
