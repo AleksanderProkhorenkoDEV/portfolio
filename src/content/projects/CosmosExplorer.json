@@ -1,6 +1,7 @@
 {
+    "order": 5,
     "title": "Cosmos Explorer",
-    "image": " ",
+    "image": "./cosmos-preview.png",
     "tags": [
         "HTML",
         "CSS",

@@ -1,6 +1,7 @@
 {
+    "order": 3,
     "title": "Productivity Dashboard",
-    "image": "",
+    "image": "./productive-dashboard-preview.png",
     "tags": [
         "Lit",
         "TypeScript",

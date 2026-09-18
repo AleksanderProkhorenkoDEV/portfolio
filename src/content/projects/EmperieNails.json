@@ -1,6 +1,7 @@
 {
+    "order": 4,
     "title": "Emperie ClassBot",
-    "image": "",
+    "image": "./bankleks-preview.png",
     "tags": [
         "TypeScript",
         "Node",

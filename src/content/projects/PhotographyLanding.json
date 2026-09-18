@@ -1,6 +1,7 @@
 {
+    "order": 6,
     "title": "Photography Landing",
-    "image": "",
+    "image": "./landing-preview.png",
     "tags": [
         "HTML",
         "CSS"

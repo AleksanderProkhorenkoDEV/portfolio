@@ -1,6 +1,7 @@
 {
+    "order": 2,
     "title": "Finance Dashboard",
-    "image": "",
+    "image": "./Finance-dashboard-preview.png",
     "tags": [
         "Open Cells",
         "Lit",
