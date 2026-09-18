@@ -1,8 +1,19 @@
 ---
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = (await getCollection("projectsCollection")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
-
 <BaseLayout>
-    <h1>Projects</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center lg:justify-items-stretch">
+    {
+      projects.map((project, i) => (
+        <ProjectCard project={project} index={i + 1} />
+      ))
+    }
+  </div>
 </BaseLayout>
