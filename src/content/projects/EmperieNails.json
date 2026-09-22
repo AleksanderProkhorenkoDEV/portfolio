@@ -1,7 +1,7 @@
 {
     "order": 4,
     "title": "Emperie ClassBot",
-    "image": "./bankleks-preview.png",
+    "image": "./telegram-bot.png",
     "tags": [
         "TypeScript",
         "Node",
